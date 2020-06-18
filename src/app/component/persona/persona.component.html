@@ -1,0 +1,43 @@
+<br>
+<h1>Datos Personales</h1>
+<br>
+<form #personaForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="personaService.selectedPersona.$keyRegistro">
+
+  <label for="num_dentificacion"><b>N. Identificacion*</b></label>
+
+  <input class="form-control" id="Num_identificacion" name="num_identificacion" #num_identificacion="ngModel"
+    [(ngModel)]="personaService.selectedPersona.num_identificacion">
+
+  <br>
+  <label for="nombre"><b>Nombre*</b></label>
+  <input type="text" class="form-control" name="nombre" id="nombre" #nombre="ngModel"
+    [(ngModel)]="personaService.selectedPersona.nombre">
+  <br>
+
+  <label for="apellido"><b>Apellido*</b></label>
+  <input type="text" class="form-control" name="apellido" id="apellido" #apellido="ngModel"
+    [(ngModel)]="personaService.selectedPersona.apellido">
+  <br>
+  <label for="telefono"><b>Celular*</b></label>
+  <input type="text" class="form-control" name="telefono" id="telefono" #telefono="ngModel"
+    [(ngModel)]="personaService.selectedPersona.telefono">
+  <br>
+  <label for="direccion"><b>Direccion*</b></label>
+  <input type="text" class="form-control" name="direccion" id="direccion" #direccion="ngModel"
+    [(ngModel)]="personaService.selectedPersona.direccion">
+  <br>
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(personaForm)">
+        Agregar persona
+      </button>
+
+    </div>
+  </div>
+
+
+</form>

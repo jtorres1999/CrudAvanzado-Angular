@@ -1,0 +1,39 @@
+<br><br>
+<div class="btn-group">
+  <input type="text" class="form-control" id="buscar" placeholder="Buscar.." [(ngModel)]='buscar'>
+  <button class="btn btn-primary" (click)='consulPersona();'>Consultar</button>
+</div>
+
+<br><br>
+
+
+<table class="table table-bordered">
+
+  <tr>
+    <td> N. Identificacion</td>
+    <td>Nombre</td>
+    <td>Apellido</td>
+    <td>Celular</td>
+    <td>Direccion</td>
+  </tr>
+
+  <tr *ngFor="let personalista of personaList">
+    <td>{{personalista.num_identificacion}}</td>
+    <td>{{personalista.nombre}}</td>
+    <td>{{personalista.apellido}}</td>
+    <td>{{personalista.telefono}}</td>
+    <td>{{personalista.direccion}}</td>
+    <td>
+      <button type="button" (click)="onEdit(personalista)" class="btn btn-outline-danger btn-sm">
+        Edit
+      </button>
+    </td>
+    <td>
+
+      <button type="button" (click)="onDelete(personalista.$keyRegistro)" class="btn btn-outline-danger btn-sm">
+        Delete
+      </button>
+    </td>
+  </tr>
+
+</table>
