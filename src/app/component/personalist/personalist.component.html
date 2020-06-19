@@ -1,7 +1,7 @@
 <br><br>
 <div class="btn-group">
   <input type="text" class="form-control" id="buscar" placeholder="Buscar.." [(ngModel)]='buscar'>
-  <button class="btn btn-primary" (click)='consulPersona();'>Consultar</button>
+  <button class="btn btn-danger" (click)='consulPersona();'>Consultar</button>
 </div>
 
 <br><br>
@@ -25,13 +25,13 @@
     <td>{{personalista.direccion}}</td>
     <td>
       <button type="button" (click)="onEdit(personalista)" class="btn btn-outline-danger btn-sm">
-        Edit
+        Editar
       </button>
     </td>
     <td>
 
       <button type="button" (click)="onDelete(personalista.$keyRegistro)" class="btn btn-outline-danger btn-sm">
-        Delete
+        Eliminar
       </button>
     </td>
   </tr>

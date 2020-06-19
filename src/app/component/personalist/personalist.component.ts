@@ -56,7 +56,7 @@ export class PersonalistComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           type: 'success',
-          title: 'Dato no encontrado',
+          title: 'No Encontramos su Busqueda',
           showConfirmButton: false,
           timer: 1500
         })
